@@ -1,0 +1,156 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 33% 98%;
+    --foreground: 24 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 24 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 24 10% 10%;
+
+    --primary: 24 95% 53%;
+    --primary-foreground: 60 9% 98%;
+
+    --secondary: 60 4% 96%;
+    --secondary-foreground: 24 10% 10%;
+
+    --muted: 60 4% 96%;
+    --muted-foreground: 25 6% 42%;
+
+    --accent: 12 94% 49%;
+    --accent-foreground: 60 9% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 60 9% 98%;
+
+    --border: 20 5% 90%;
+    --input: 20 5% 90%;
+    --ring: 24 95% 53%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 20 14% 4%;
+    --foreground: 60 9% 98%;
+
+    --card: 20 14% 4%;
+    --card-foreground: 60 9% 98%;
+
+    --popover: 20 14% 4%;
+    --popover-foreground: 60 9% 98%;
+
+    --primary: 24 95% 53%;
+    --primary-foreground: 60 9% 98%;
+
+    --secondary: 12 6% 15%;
+    --secondary-foreground: 60 9% 98%;
+
+    --muted: 12 6% 15%;
+    --muted-foreground: 24 5% 64%;
+
+    --accent: 12 6% 15%;
+    --accent-foreground: 60 9% 98%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 60 9% 98%;
+
+    --border: 12 6% 15%;
+    --input: 12 6% 15%;
+    --ring: 24 95% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+  .animate-delay-600 {
+    animation-delay: 600ms;
+  }
+}
+
+.hero-gradient {
+  background: linear-gradient(90deg, #FF4500 0%, #FF8C00 100%);
+}
+
+.discount-gradient {
+  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+}
+
+.feature-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item {
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: hsl(var(--primary));
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-3px);
+}
