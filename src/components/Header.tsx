@@ -42,7 +42,7 @@ const Header: React.FC = () => {
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-yellow-300 bg-opacity-90 shadow-md backdrop-blur-sm' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+          {/* Logo1 */}
           <Link to="/" className="flex items-center space-x-2">
             <img 
               src="https://img.icons8.com/color/48/000000/hamburger.png" 
@@ -58,7 +58,7 @@ const Header: React.FC = () => {
               Home
             </Link>
             <Link to="/menu" className={`nav-link ${isScrolled ? 'text-gray-800' : 'text-white'} ${isActive('/menu') ? 'font-medium' : ''}`}>
-              Menu
+              Menu 
             </Link>
             <Link to="/about" className={`nav-link ${isScrolled ? 'text-gray-800' : 'text-white'} ${isActive('/about') ? 'font-medium' : ''}`}>
               About
